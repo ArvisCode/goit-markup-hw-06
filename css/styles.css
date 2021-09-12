@@ -80,7 +80,6 @@ a {
 /* -------------header------------- */
 
 .header {
-  padding-top: 24px;
   border-bottom: 1px solid #ececec;
 }
 
@@ -169,6 +168,8 @@ a {
 
 .contact-icon {
   margin-right: 10px;
+
+  fill: var(--contact-link-color);
 
   transition-property: fill;
   transition-duration: 250ms;
@@ -616,6 +617,8 @@ a {
   height: 50px;
   padding: 15px;
 
+  color: #ffffff;
+
   background: transparent;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -663,6 +666,7 @@ a {
 .footer-send-btn:focus,
 .footer-send-btn:hover {
   cursor: pointer;
+  outline: none;
 }
 
 .footer-send-icon {
@@ -706,6 +710,7 @@ a {
   background-color: var(--accent-button-background-color);
   color: var(--accent-button-text-color);
   cursor: pointer;
+  outline: none;
 
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -716,7 +721,7 @@ a {
   justify-content: space-between;
 }
 
-.gallery-item {
+.gallery-div {
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -754,15 +759,18 @@ a {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.gallery-item:hover .overlay,
-.gallery-overlay:focus .overlay {
-  transform: translateY(0);
-
-  overflow: auto;
+.gallery-link:hover,
+.gallery-link:focus {
+  outline: none;
 }
 
-.gallery-item:focus,
-.gallery-item:hover {
+.gallery-link:hover .overlay,
+.gallery-link:focus .overlay {
+  transform: translateY(0);
+  overflow: auto;
+}
+.gallery-link:hover .gallery-div,
+.gallery-link:focus .gallery-div {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
