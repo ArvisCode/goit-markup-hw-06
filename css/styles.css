@@ -41,9 +41,8 @@ img {
 
 ul,
 li {
-  list-style: none;
   margin: 0;
-  padding: 0;
+  list-style: none;
 }
 
 ul {
@@ -99,7 +98,10 @@ a {
 
 .header-logo {
   color: var(--header-second-logo-color);
-  margin-right: 93px;
+}
+
+.header-nav {
+  margin-left: 93px;
 }
 
 .nav-item:not(:first-child),
