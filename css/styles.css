@@ -967,6 +967,22 @@ a {
   align-items: center;
 
   color: #757575;
+  display: flex;
+}
+
+.modal-checkbox-label::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  background-image: url(../images/check-off.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin-right: 8px;
+}
+
+.modal-checkbox:checked + .modal-checkbox-label::before {
+  background-image: url(../images/check-on.svg);
 }
 
 .modal-checkbox-link {
